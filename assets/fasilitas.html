@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilitas - Bisnis Digital Universitas Abdurrab</title>
+    <meta name="keywords" content="univrab, bisnis digital, fasilitas kampus">
+    <meta name="description"
+        content="Fasilitas modern Program Studi Bisnis Digital Universitas Abdurrab untuk mendukung pembelajaran dan ibadah.">
+    <link rel="icon" href="logo.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS tambahan khusus halaman fasilitas (opsional, jika ingin kustomisasi lebih) */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: var(--space-lg) 0;
+        }
+
+        .facility-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: 1px solid var(--light-gray);
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .facility-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .facility-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .facility-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .facility-card:hover .facility-image {
+            transform: scale(1.05);
+        }
+
+        .facility-icon {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            font-size: 5rem;
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover .facility-icon {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-teal));
+            transform: scale(1.02);
+        }
+
+        .facility-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .facility-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .facility-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .facility-content p {
+            color: var(--dark-gray);
+            margin: 1rem 0 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .btn-facility {
+            background: transparent;
+            border: 2px solid var(--secondary-blue);
+            color: var(--secondary-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-facility:hover {
+            background: var(--secondary-blue);
+            color: var(--white);
+        }
+
+        @media screen and (max-width: 768px) {
+            .facility-icon {
+                font-size: 4rem;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="logo.png" alt="Logo Universitas Abdurrab" width="50" height="50">
+                </div>
+                <div class="logo-text">
+                    <h1>Bisnis Digital</h1>
+                    <span>Universitas Abdurrab</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="../index.html" class="nav-link">Beranda</a>
+                <a href="profil.html" class="nav-link">Profil</a>
+                <a href="visimisi.html" class="nav-link">Visi Misi</a>
+
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">
+                        Akademik
+                        <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 0.25rem;"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="dosen.html" class="dropdown-link">Dosen</a>
+                        <a href="fasilitas.html" class="dropdown-link active">Fasilitas</a>
+                    </div>
+                </div>
+
+                <a href="https://univrab.ac.id/berita" class="nav-link">Artikel</a>
+
+                <a href="https://admisi.univrab.ac.id/" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">
+                    <i class="fas fa-user-graduate"></i> Daftar
+                </a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka menu navigasi">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="logo.png" alt="Logo" width="40">
+                </div>
+                <div class="logo-text">
+                    <h1 style="font-size: 1.1rem;">Bisnis Digital</h1>
+                    <span style="font-size: 0.8rem;">Universitas Abdurrab</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Tutup menu navigasi">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-links">
+            <a href="../index.html" class="mobile-nav-link">Beranda</a>
+            <a href="profil.html" class="mobile-nav-link">Profil</a>
+            <a href="visimisi.html" class="mobile-nav-link">Visi Misi</a>
+
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn">
+                    Akademik
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="mobile-dropdown-menu">
+                    <a href="dosen.html" class="mobile-dropdown-link">Dosen</a>
+                    <a href="fasilitas.html" class="mobile-dropdown-link active">Fasilitas</a>
+                </div>
+            </div>
+
+            <a href="https://univrab.ac.id/berita" class="mobile-nav-link">Artikel</a>
+
+            <a href="https://admisi.univrab.ac.id/" class="btn btn-primary" style="margin-top: 1rem;">
+                <i class="fas fa-user-graduate"></i> Daftar Sekarang
+            </a>
+        </div>
+    </div>
+
+    <!-- BREADCRUMB (sama seperti dosen.html) -->
+    <div class="breadcrumb">
+        <div class="container breadcrumb-container">
+            <a href="../index.html" class="breadcrumb-item">Akademik</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item breadcrumb-active">Fasilitas</span>
+        </div>
+    </div>
+
+    <!-- HERO BANNER (sama seperti dosen.html, hanya teks diubah) -->
+    <section class="dosen-banner">
+        <div class="container">
+            <h1 data-aos="fade-up">Fasilitas Kampus</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Program Studi Bisnis Digital - Universitas Abdurrab</p>
+        </div>
+    </section>
+
+    <!-- Grid Fasilitas -->
+    <div class="container">
+        <div class="facilities-grid">
+            <!-- 1. Masjid (gambar) -->
+            <div class="facility-card" data-aos="fade-up">
+                <img src="masjid.png" alt="Masjid Kampus" class="facility-image">
+                <div class="facility-content">
+                    <h3>Masjid</h3>
+                    <p>Tempat ibadah yang nyaman dengan arsitektur islami, dilengkapi area wudhu luas dan sound system
+                        berkualitas.</p>
+
+                </div>
+            </div>
+
+            <!-- 2. Discussion Room (gambar) -->
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="50">
+                <img src="diskusi.png" alt="Ruang Diskusi" class="facility-image">
+                <div class="facility-content">
+                    <h3>Discussion Room</h3>
+                    <p>Ruang diskusi modern dengan papan tulis interaktif, LCD, dan tata ruang fleksibel untuk kerja
+                        kelompok.</p>
+
+                </div>
+            </div>
+
+            <!-- 3. Perpustakaan Digital (ikon) -->
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="100">
+
+                <img src="pustaka.JPG" alt="Perpustakaan" class="facility-image">
+                <div class="facility-content">
+                    <h3>Perpustakaan</h3>
+                    <p>Ada berbagai jenis buku, jurnal, dan database akademik 24/7 melalui komputer atau perangkat
+                        pribadi.</p>
+
+                </div>
+            </div>
+
+            <!-- 4. Laboratorium Komputer (ikon) -->
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="150">
+
+                <img src="lab.jpeg" alt="Laboratorium Komputer" class="facility-image">
+                <div class="facility-content">
+                    <h3>Lab. Komputer</h3>
+                    <p>Lab dengan spesifikasi tinggi untuk praktik coding, analisis data, dan pengembangan aplikasi
+                        bisnis.</p>
+
+                </div>
+            </div>
+
+            <!-- 5. Ruang Kelas Smart (ikon) -->
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="200">
+
+                <img src="smart.JPG" alt="Smart Classroom" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Smart Classroom</h3>
+                    <p>Kelas dengan proyektor 4K, sistem audio canggih, dan koneksi internet berkecepatan tinggi.</p>
+
+                </div>
+            </div>
+
+            <!-- 8. Kantin Halal (ikon) -->
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="250">
+
+                <img src="kantin.jpg" alt="Kantin Halal" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Kantin Halal</h3>
+                    <p>Berbagai pilihan makanan halal dengan harga terjangkau dan tempat bersih.</p>
+
+                </div>
+            </div>
+
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="300">
+
+                <img src="ambulan.JPG" alt="Ambulance" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>AMBULANCE</h3>
+                    <p>Fasilitas ambulance 24 jam untuk keadaan darurat kesehatan.</p>
+
+                </div>
+            </div>
+
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="350">
+
+                <img src="yayasan.jpg" alt="Yayasan" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Bus Yayasan</h3>
+                    <p>Fasilitas transportasi untuk mahasiswa dengan rute yang terjangkau dan nyaman.</p>
+
+                </div>
+            </div>
+
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="400">
+
+                <img src="sekolah.JPG" alt="Sekolah" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Bus Sekolah</h3>
+                    <p>Fasilitas transportasi untuk mahasiswa dengan rute yang terjangkau dan nyaman.</p>
+
+                </div>
+            </div>
+
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="450">
+
+                <img src="asrama.jpg" alt="Asrama" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Asrama</h3>
+                    <p>Fasilitas tempat tinggal yang nyaman dan aman untuk mahasiswa.</p>
+
+                </div>
+            </div>
+
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="500">
+
+                <img src="depot.jpg" alt="depot" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Depot Air</h3>
+                    <p>Fasilitas penyediaan air bersih dan minuman untuk mahasiswa.</p>
+
+                </div>
+            </div>
+
+            <div class="facility-card" data-aos="fade-up" data-aos-delay="550">
+
+                <img src="caffe.jpg" alt="Café" class="facility-image">
+
+                <div class="facility-content">
+                    <h3>Café</h3>
+                    <p>Fasilitas tempat bersantai dengan berbagai pilihan makanan dan minuman.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Program Studi Bisnis Digital</h3>
+                    <p>Universitas Abdurrab</p>
+                    <p>Menghasilkan lulusan yang kompeten dalam bidang bisnis digital dengan integritas dan kemampuan
+                        adaptasi terhadap perkembangan teknologi.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Studi</h4>
+                    <ul>
+                        <li><a href="profil.html">Profil Program Studi</a></li>
+                        <li><a href="visimisi.html">Visi & Misi</a></li>
+                        <li><a href="STRUKTUR HIMA BISNIS DIGITAL.png">Struktur Organisasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Akademik</h4>
+                    <ul>
+                        <li><a href="Kalender Akademik Tahun Ajaran 2025-2026.pdf">Kalender Akademik</a></li>
+                        <li><a href="https://univrab.ac.id/pengumuman">Pengumuman</a></li>
+                        <li><a href="#">Beasiswa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="https://siakad.univrab.ac.id/">SIAKAD</a></li>
+                        <li><a href="https://spada.univrab.ac.id/">SPADA</a></li>
+                        <li><a href="https://pustaka.univrab.ac.id/">Perpustakaan Digital</a></li>
+                        <li><a href="https://jurnal.univrab.ac.id/">E-Journal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Program Studi Sarjana Terapan Bisnis Digital - Universitas Abdurrab. Semua hak
+                    dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality (sama seperti dosen.html)
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdownMenu = btn.nextElementSibling;
+                dropdownMenu.classList.toggle('active');
+                const icon = btn.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Tutup mobile menu saat klik di luar
+        document.addEventListener('click', (e) => {
+            if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Set active state untuk Fasilitas
+        const fasilitasLink = document.querySelector('a[href="fasilitas.html"]');
+        if (fasilitasLink) {
+            fasilitasLink.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

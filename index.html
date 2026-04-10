@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="univrab, bisnis digital, kesehatan, kedokteran, teknik, sosial">
+    <title>Program Studi Sarjana Terapan Bisnis Digital - Universitas Abdurrab</title>
+    <meta name="description"
+        content="Program Studi Sarjana Terapan Bisnis Digital Universitas Abdurrab - Menghasilkan profesional digital yang kompeten dan berintegritas.">
+    <link rel="icon" href="assets/Uni.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="assets/logo.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="assets/logo.png" alt="Logo Universitas Abdurrab" width="50" height="50">
+                </div>
+                <div class="logo-text">
+                    <h1>Bisnis Digital</h1>
+                    <span>Universitas Abdurrab</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="assets/profil.html" class="nav-link">Profil</a>
+                <a href="assets/visimisi.html" class="nav-link">Visi Misi</a>
+
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">
+                        Akademik
+                        <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 0.25rem;"></i>
+                    </a>
+                    <div class="dropdown-menu">
+
+                        <a href="assets/dosen.html" class="dropdown-link">Dosen</a>
+                        <a href="assets/fasilitas.html" class="dropdown-link">Fasilitas</a>
+
+                    </div>
+                </div>
+
+                <a href="https://univrab.ac.id/berita" class="nav-link">Artikel</a>
+
+                <a href="https://admisi.univrab.ac.id/" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">
+                    <i class="fas fa-user-graduate"></i> Daftar
+                </a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka menu navigasi">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="10" fill="#002447" />
+                        <path d="M15 15L35 15M15 25L35 25M15 35L27 35" stroke="white" stroke-width="2.5"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1 style="font-size: 1.1rem;">Bisnis Digital</h1>
+                    <span style="font-size: 0.8rem;">Universitas Abdurrab</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Tutup menu navigasi">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link active">Beranda</a>
+            <a href="assets/profil.html" class="mobile-nav-link">Profil</a>
+            <a href="assets/visimisi.html" class="mobile-nav-link">Visi Misi</a>
+
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn">
+                    Akademik
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="mobile-dropdown-menu">
+
+                    <a href="assets/dosen.html" class="mobile-dropdown-link">Dosen</a>
+                    <a href="assets/fasilitas.html" class="mobile-dropdown-link">Fasilitas</a>
+                </div>
+            </div>
+
+            <a href="https://univrab.ac.id/berita" class="mobile-nav-link">Artikel</a>
+
+            <a href="https://admisi.univrab.ac.id/" class="btn btn-primary" style="margin-top: 1rem;">
+                <i class="fas fa-user-graduate"></i> Daftar Sekarang
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Banner dengan Slider -->
+    <section class="hero-banner" id="heroSlider">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active"
+                style="background-image: linear-gradient(rgba(2, 128, 255, 0.315), rgba(0, 36, 71, 0.7)), url('assets/hero1.jpeg');">
+                <div class="container slider-content">
+                    <h1 data-aos="fade-up">Sarjana Bisnis Digital</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Program Studi Bisnis Digital mengintegrasikan teknologi informasi dengan konsep bisnis digital
+                        untuk masa depan.
+                    </p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(2, 128, 255, 0.315), rgba(0, 36, 71, 0.7)), url('assets/hero2.png');">
+                <div class="container slider-content">
+                    <h1 data-aos="fade-up">Inovasi & Teknologi</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Berbekal pengetahuan e-commerce, digital marketing, dan analitik data untuk bersaing di era
+                        industri 4.0.
+                    </p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(2, 128, 255, 0.315), rgba(0, 36, 71, 0.7)), url('assets/hero3.png');">
+                <div class="container slider-content">
+                    <h1 data-aos="fade-up">Kewirausahaan Digital</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Mencetak lulusan yang mampu menciptakan peluang bisnis berbasis teknologi dan syariah.
+                    </p>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(2, 128, 255, 0.315), rgba(0, 36, 71, 0.7)), url('assets/hero4.png');">
+                <div class="container slider-content">
+                    <h1 data-aos="fade-up">Rabbani Amanah Beradab</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Nilai-nilai Islami menjadi fondasi dalam setiap langkah menuju profesionalisme digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigasi Titik (Dots) -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <div class="running-text">
+        <div class="running-text-container">
+            <i class="fas fa-bullhorn"></i>
+            <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite">
+                <span class="px-5">Pendidikan merupakan tiket untuk masa depan. Hari esok untuk orang-orang yang telah
+                    mempersiapkan dirinya hari ini | </span>
+                <span class="px-5">Agama tanpa ilmu pengetahuan adalah buta. Dan ilmu pengetahuan tanpa agama adalah
+                    lumpuh | </span>
+                <span class="px-5">Hiduplah seakan-akan kau akan mati besok. Belajarlah seakan-akan kau akan hidup
+                    selamanya | </span>
+            </marquee>
+            <i class="fas fa-bullhorn"></i>
+        </div>
+    </div>
+
+    <section class="moto-section">
+        <div class="container">
+            <div class="moto-content" data-aos="fade-up">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Selamatkan Generasi Melalui Pendidikan</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Program Info -->
+                <section class="program-info" data-aos="fade-up">
+                    <div class="program-header">
+                        <div class="program-title">
+                            <h2>Program Studi Bisnis Digital</h2>
+                            <div class="program-degree">Sarjana Bisnis Digital (S.BD)</div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Program Studi Sarjana Terapan Bisnis Digital Universitas Abdurrab
+                        dirancang untuk menghasilkan lulusan yang kompeten dalam mengintegrasikan
+                        teknologi digital dengan strategi bisnis.
+                    </p>
+
+                    <p>
+                        Program ini menekankan pada pembelajaran berbasis praktik dengan kurikulum
+                        yang selalu diperbarui sesuai perkembangan industri. Mahasiswa akan dibekali
+                        dengan pengetahuan dan keterampilan dalam bidang e-commerce, digital marketing,
+                        analitik data, pengembangan produk digital, dan kewirausahaan teknologi.
+                    </p>
+                </section>
+
+                <!-- Visi & Misi -->
+                <section class="content-section" id="profil" data-aos="fade-up">
+                    <div class="section-header">
+                        <h2>Visi & Misi</h2>
+                    </div>
+
+                    <h3>Visi</h3>
+                    <p>"Menjadi Program Studi Sarjana Bisnis Digital yang menghasilkan lulusan yang profesional dalam
+                        bidang Bisnis Digital Syariah dan halal berlandaskan nila-nilai Rabbani Amanah Beradab (RAB) di
+                        tingkat Nasional dan Internasional pada tahun 2035."</p>
+
+                    <h3>Misi</h3>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Melaksanakan catur dharma Perguruan Tinggi yaitu Pendidikan,
+                            penelitian, pengabdian kepada Masyarakat dengan nilai Rabbani Amanah Beradab.</li>
+                        <li style="margin-bottom: 0.5rem;">Melaksanakan Penelitian yang bersifat kreatif, inovatif, dan
+                            berorientasi produk dalam memajukan dan mensejahterakan masyarakat sesuai dengan nilai-nilai
+                            RAB.</li>
+                        <li style="margin-bottom: 0.5rem;">Melaksankan Pendidikan dalam bidang Bisnis Digital untuk
+                            memajukan ilmu pengetahuan dan teknologi Syariah dan yang halal sesuai dengan nilai RAB.
+                        </li>
+                        <li style="margin-bottom: 0.5rem;">Melaksanakan Dakwah Islamiyah dalam rangka
+                            mengimplementasikan nilai RAB kepada seluruh civitas akademik dan masyarakat.</li>
+                        <li style="margin-bottom: 0.5rem;">Melaksanakan Penelitian dalam bidang Bisnis Digital untuk
+                            meningkatkan ilmu pengetahuan, teknologi dan bisnis yang sesuai dengan nilai RAB.</li>
+                        <li style="margin-bottom: 0.5rem;">Melaksanakan Pengabdian Masyarakat dalam bidang Bisnis
+                            Digital Syariah dan halal sebagai wujud nyata implementasi nilai RAB.</li>
+                        <li style="margin-bottom: 0.5rem;">Menjalin Kerjasama yang berkelanjutan dengan berbagai pihak
+                            dalam bidang catur dharma PT yang berkualitas dan sesuai dengan nilai.</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Quick Links -->
+                <div class="sidebar-widget" data-aos="fade-left">
+                    <h3 class="widget-title">Tautan Cepat</h3>
+                    <ul class="widget-list">
+                        <li><a href="assets/profil.html"><i class="fas fa-arrow-right"></i> Profil Program Studi</a>
+                        </li>
+                        <li><a href="assets/dosen.html"><i class="fas fa-arrow-right"></i> Dosen & Staf</a></li>
+                        <li><a href="https://admisi.univrab.ac.id/"><i class="fas fa-arrow-right"></i> Pendaftaran
+                                Mahasiswa</a></li>
+                        <li><a href="assets/Kalender Akademik Tahun Ajaran 2025-2026.pdf"><i
+                                    class="fas fa-arrow-right"></i> Kalender Akademik</a></li>
+                        <li><a href="https://siakad.univrab.ac.id/"><i class="fas fa-arrow-right"></i> SIAKAD</a></li>
+                        <li><a href="https://spada.univrab.ac.id/"><i class="fas fa-arrow-right"></i> SPADA</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="sidebar-widget" id="kontak" data-aos="fade-left" data-aos-delay="100">
+                    <h3 class="widget-title">Kontak Kami</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Alamat</h4>
+                                <a href="https://maps.app.goo.gl/LFcVTPPVXyskKbKt8">
+                                    <p>Jl. Riau Ujung No. 73, Payung Sekaki, Pekanbaru</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telepon</h4>
+                                <a href="https://api.whatsapp.com/send?phone=628116900026">
+                                    <p>0761-38762 / 08116900026</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>bisnisdigital@univrab.ac.id</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Jumat: 08:00 - 16:00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="widget-title">Media Sosial</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/univrabID/" class="social-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bisnisdigital.univrab/" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCuQSmmJSVZo9RvNBmM_OBbA" class="social-link"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=628116900026" class="social-link"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Program Studi Bisnis Digital</h3>
+                    <p>Universitas Abdurrab</p>
+                    <p>Menghasilkan lulusan yang kompeten dalam bidang bisnis digital dengan integritas dan kemampuan
+                        adaptasi terhadap perkembangan teknologi.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Studi</h4>
+                    <ul>
+                        <li><a href="assets/profil.html">Profil Program Studi</a></li>
+                        <li><a href="assets/visimisi.html">Visi & Misi</a></li>
+                        <li><a href="assets/STRUKTUR HIMA BISNIS DIGITAL.png">Struktur Organisasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Akademik</h4>
+                    <ul>
+                        <li><a href="assets/Kalender Akademik Tahun Ajaran 2025-2026.pdf">Kalender Akademik</a></li>
+                        <li><a href="https://univrab.ac.id/pengumuman">Pengumuman</a></li>
+                        <li><a href="#">Beasiswa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="https://siakad.univrab.ac.id/">SIAKAD</a></li>
+                        <li><a href="https://spada.univrab.ac.id/">SPADA</a></li>
+                        <li><a href="https://pustaka.univrab.ac.id/">Perpustakaan Digital</a></li>
+                        <li><a href="https://jurnal.univrab.ac.id/">E-Journal</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Program Studi Sarjana Terapan Bisnis Digital - Universitas Abdurrab. Semua hak
+                    dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdownMenu = btn.nextElementSibling;
+                dropdownMenu.classList.toggle('active');
+
+                const icon = btn.querySelector('i');
+                if (dropdownMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+
+        // Nav link active state
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ========== PERBAIKAN MOBILE MENU ==========
+        // Tutup mobile menu ketika klik di luar
+        document.addEventListener('click', (e) => {
+            if (mobileNav.classList.contains('active') &&
+                !mobileNav.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Tutup mobile menu ketika resize window ke ukuran desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Perbaikan untuk touch devices
+        if ('ontouchstart' in window) {
+            // Tambahkan class untuk touch devices
+            document.body.classList.add('touch-device');
+
+            // Perbaikan delay tap di iOS
+            document.addEventListener('touchstart', () => { }, {
+                passive: true
+            });
+        }
+
+        // Prevent scrolling when mobile menu is open
+        mobileNav.addEventListener('touchmove', function (e) {
+            if (mobileNav.classList.contains('active')) {
+                e.preventDefault();
+            }
+        }, {
+            passive: false
+        });
+
+        // ========== HERO SLIDER ==========
+        let slideIndex = 1; // Memulai dari slide 1
+        let slideTimer;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        // Fungsi untuk menampilkan slide tertentu
+        function showSlide(n) {
+            // Loop index jika melebihi batas
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            // Sembunyikan semua slide dan non-aktifkan semua dot
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Tampilkan slide yang aktif dan aktifkan dot yang sesuai
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active');
+
+            // Reset timer
+            resetTimer();
+        }
+
+        // Fungsi untuk pindah ke slide berikutnya
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        // Fungsi untuk pindah ke slide sebelumnya (jika ingin tambah panah nanti)
+        function prevSlide() {
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+
+        // Fungsi untuk langsung menuju slide tertentu (dari dot)
+        window.currentSlide = function (n) {
+            slideIndex = n;
+            showSlide(slideIndex);
+        }
+
+        // Fungsi untuk memulai timer otomatis
+        function startAutoSlide() {
+            slideTimer = setInterval(nextSlide, 5000); // Ganti gambar setiap 5 detik
+        }
+
+        // Fungsi untuk mereset timer
+        function resetTimer() {
+            clearInterval(slideTimer);
+            startAutoSlide();
+        }
+
+        // Inisialisasi slider
+        document.addEventListener('DOMContentLoaded', function () {
+            showSlide(slideIndex);
+            startAutoSlide();
+        });
+    </script>
+</body>
+
+</html>
